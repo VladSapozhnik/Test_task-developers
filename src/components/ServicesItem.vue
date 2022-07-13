@@ -40,7 +40,7 @@ export default {
 .accordion {
   &-item {
     background: #fff;
-    padding: 14px 70px 15px 96px;
+    padding: 14px 70px 19px 0px;
     font-weight: 400;
     font-size: 18px;
     line-height: 175%;
@@ -49,18 +49,33 @@ export default {
     position: relative;
     margin-bottom: 10px;
     &__head {
+      padding-left: 96px;
       cursor: pointer;
+      padding-bottom: 0;
+      transition: all 0.3s ease-out;
     }
     &__body {
       max-height: 0;
       overflow: hidden;
       transition: all 0.3s ease-out;
+      position: relative;
+      padding-left: 96px;
+      &::before {
+        content: "";
+        width: 1px;
+        min-height: 100%;
+        display: block;
+        position: absolute;
+        background: #000000;
+        top: 0;
+        left: 54px;
+      }
       p + p {
         margin-top: 36px;
       }
     }
     &__content {
-      padding: 32px 0 47px 0;
+      padding: 16px 0 12px 0;
     }
     &::after {
       content: "";
@@ -94,6 +109,10 @@ export default {
       }
       &::before {
         transform: rotate(0deg);
+      }
+
+      .accordion-item__head {
+        padding-bottom: 32px;
       }
     }
   }

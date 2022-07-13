@@ -1,6 +1,7 @@
 <template>
   <div class="services">
     <div class="container">
+      <h2 class="h2">Что входит в услугу по созданию дизайна интернет-магазина?</h2>
       <div class="accordion">
         <ServicesItem :isOpen="isOpen" :servicesData="servicesData" />
       </div>
@@ -53,6 +54,13 @@ export default {
 <style lang="scss">
 .services {
   padding: 120px 0;
-  background: #daecff;
+  background: #daecff url(@/assets/handbag.svg) no-repeat 79% 83%;
+  // &::after {
+  //   content: '';
+  //   background: ;
+  // }
+  .h2 {
+    margin-bottom: 82px;
+  }
 }
 </style>
