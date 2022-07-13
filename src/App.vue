@@ -36,17 +36,25 @@
         </p>
         <div class="btn main-btn">Заказать</div>
       </div>
+      
     </main>
     <Services />
+    <Info/>
+    <ContactForm/>
   </div>
 </template>
 
 <script>
 import Services from "./components/Services.vue";
+import Info from "./components/Info.vue";
+import ContactForm from "./components/ContactForm.vue";
+
 export default {
   name: "App",
   components: {
     Services,
+    Info,
+    ContactForm
   },
 };
 </script>

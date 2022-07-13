@@ -54,7 +54,7 @@ export default {
 <style lang="scss">
 .services {
   padding: 120px 0;
-  background: #daecff url(@/assets/handbag.svg) no-repeat 79% 83%;
+  background: #daecff url(@/assets/handbag.svg) no-repeat 93% 83%;
   // &::after {
   //   content: '';
   //   background: ;
