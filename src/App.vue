@@ -1,11 +1,31 @@
  <template>
   <div id="app">
     <header class="header">
+      <ul class="nav-mobile" :class="{ active: isOpen }">
+        <li>
+          <a href="#" class="nav-mobile__link">Услуги</a>
+        </li>
+        <li>
+          <a href="#" class="nav-mobile__link">Портфолио</a>
+        </li>
+        <li>
+          <a href="#" class="nav-mobile__link">Этапы</a>
+        </li>
+        <li>
+          <a href="#" class="nav-mobile__link">Дизайнеры</a>
+        </li>
+      </ul>
       <div class="container">
         <div class="header-wrap _f _i-center">
           <div class="header__logo">
             <img src="@/assets/logo.svg" class="header__logo-pic" alt="logo" />
           </div>
+          <div @click="isOpen = !isOpen" class="btn-popup _ml-auto">
+            <span class="btn-popup__circle"></span>
+            <span class="btn-popup__circle"></span>
+            <span class="btn-popup__circle"></span>
+          </div>
+
           <nav class="nav _ml-auto">
             <ul class="nav-list">
               <li>
@@ -58,6 +78,11 @@ export default {
     ContactForm,
     Footer,
   },
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
 };
 </script>
 
@@ -74,6 +99,52 @@ export default {
   left: 0;
   top: 0;
   z-index: 10;
+}
+
+.btn-popup {
+  display: none;
+  width: 49px;
+  cursor: pointer;
+  &__circle {
+    width: 13px;
+    height: 13px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: block;
+    & + & {
+      margin-left: 5px;
+    }
+  }
+}
+
+.nav-mobile {
+  width: 100%;
+  background: #67aefc;
+  position: absolute;
+  padding: 137px 0 49px;
+  text-align: center;
+  transition: all 0.3s ease;
+  z-index: -1;
+  transform: translateY(-100%);
+  &.active {
+    left: 0;
+    top: 0;
+    transform: translateY(0%);
+  }
+  li {
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #ffffff;
+    a:hover {
+      padding-bottom: 2px;
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+  li + li {
+    margin-top: 43px;
+  }
 }
 
 .nav {
@@ -138,11 +209,23 @@ export default {
     background-size: 4%, 15%, 40%;
     background-position: 1% 100px, 0% 95%, 90% 85%;
   }
+  .btn-popup {
+    display: flex;
+  }
+  .nav {
+    display: none;
+  }
+  .header-wrap {
+    .btn {
+      display: none;
+    }
+  }
 }
 @media (max-width: 640px) {
   .main {
     padding: 500px 0 51px;
-    background-image: url(@/assets/mobile/circle-main.svg), url(@/assets/mobile/main-bg.svg);
+    background-image: url(@/assets/mobile/circle-main.svg),
+      url(@/assets/mobile/main-bg.svg);
     background-position: 90% 78%, 50% 84px;
     background-size: 15px, 100%;
     background-repeat: no-repeat, no-repeat;

@@ -47,12 +47,12 @@ export default {
       padding-left: 96px;
       cursor: pointer;
       padding-bottom: 0;
-      transition: all 0.3s ease-out;
+      transition: all 0.3s ease;
     }
     &__body {
       max-height: 0;
       overflow: hidden;
-      transition: all 0.3s ease-out;
+      transition: all 0.3s ease;
       position: relative;
       padding-left: 96px;
       &::before {
@@ -81,7 +81,7 @@ export default {
       border-radius: 50%;
       top: 18px;
       left: 44px;
-      transition: all 0.3s ease-out;
+      transition: all 0.3s ease;
     }
     &::before {
       content: "";
@@ -92,11 +92,11 @@ export default {
       right: 39px;
       top: 15px;
       transform: rotate(180deg);
-      transition: all 0.3s ease-out;
+      transition: all 0.3s ease;
     }
     &.active {
       .accordion-item__body {
-        transition: all 0.3s ease-out;
+        transition: all 0.3s ease;
         max-height: 1000px;
       }
       &::after {
