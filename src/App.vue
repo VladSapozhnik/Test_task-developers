@@ -58,6 +58,7 @@
       </div>
     </main>
     <Services />
+    <Stages/>
     <Info />
     <ContactForm />
     <Footer />
@@ -69,6 +70,7 @@ import Services from "./components/Services.vue";
 import Info from "./components/Info.vue";
 import ContactForm from "./components/ContactForm.vue";
 import Footer from "./components/Footer.vue";
+import Stages from './components/Stages.vue';
 
 export default {
   name: "App",
@@ -77,6 +79,7 @@ export default {
     Info,
     ContactForm,
     Footer,
+    Stages,
   },
   data() {
     return {
@@ -217,7 +220,7 @@ export default {
   }
   .header-wrap {
     .btn {
-      display: none;
+      display: none !important;
     }
   }
 }
