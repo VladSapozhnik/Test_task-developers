@@ -55,12 +55,23 @@ export default {
 .services {
   padding: 120px 0;
   background: #daecff url(@/assets/handbag.svg) no-repeat 93% 83%;
-  // &::after {
-  //   content: '';
-  //   background: ;
-  // }
+
   .h2 {
     margin-bottom: 82px;
+  }
+}
+
+@media (max-width: 1710px) {
+  .services {
+    background-position: 93% 97%;
+    background-size: 6%;
+  }
+}
+
+@media (max-width: 975px) {
+  .services {
+    background-position: 93% 97%;
+    background-size: 70px;
   }
 }
 </style>

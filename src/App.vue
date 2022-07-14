@@ -95,9 +95,10 @@ export default {
 
 .main {
   padding: 266px 0 180px;
-  background-image: url(@/assets/main-circle.svg), url(@/assets/main-wavea.svg), url(@/assets/main-bg.svg);
-  background-position: 13% 120px, 0% 90%, 80% 180px;
-  background-size: 53px, 236px, 776px;
+  background-image: url(@/assets/main-circle.svg), url(@/assets/main-wavea.svg),
+    url(@/assets/main-bg.svg);
+  background-position: 13% 200px, 0% 90%, 80% 180px;
+  background-size: 52px, 236px, 776px;
   background-repeat: no-repeat, no-repeat, no-repeat;
 
   .h1 {
@@ -122,6 +123,20 @@ export default {
     font-weight: 700;
     font-size: 15px;
     line-height: 100%;
+  }
+}
+
+@media (max-width: 1710px) {
+  .main {
+    background-size: 3%, 15%, 40%;
+    background-position: 3% 200px, 0% 95%, 90% 50%;
+  }
+}
+
+@media (max-width: 975px) {
+  .main {
+    background-size: 4%, 15%, 40%;
+    background-position: 1% 100px, 0% 95%, 90% 85%;
   }
 }
 </style>

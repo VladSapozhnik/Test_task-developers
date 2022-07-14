@@ -43,4 +43,18 @@ export default {
     padding: 22px 56px;
   }
 }
+
+// @media (max-width: 1710px) {
+//   .services {
+//     background-position: 93% 97%;
+//     background-size: 6%;
+//   }
+// }
+
+// @media (max-width: 975px) {
+//   .services {
+//     background-position: 93% 97%;
+//     background-size: 70px;
+//   }
+// }
 </style>
