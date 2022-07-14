@@ -36,12 +36,11 @@
         </p>
         <div class="btn main-btn">Заказать</div>
       </div>
-      
     </main>
     <Services />
-    <Info/>
-    <ContactForm/>
-    <Footer/>
+    <Info />
+    <ContactForm />
+    <Footer />
   </div>
 </template>
 
@@ -57,7 +56,7 @@ export default {
     Services,
     Info,
     ContactForm,
-    Footer
+    Footer,
   },
 };
 </script>
@@ -96,6 +95,10 @@ export default {
 
 .main {
   padding: 266px 0 180px;
+  background-image: url(@/assets/main-circle.svg), url(@/assets/main-wavea.svg), url(@/assets/main-bg.svg);
+  background-position: 13% 120px, 0% 90%, 80% 180px;
+  background-size: 53px, 236px, 776px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 
   .h1 {
     max-width: 593px;
