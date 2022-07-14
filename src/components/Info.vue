@@ -22,18 +22,12 @@ export default {
 <style lang="scss">
 .info {
   padding: 216px 0 180px;
-  // background: #fff url('@/assets/info-bg.svg') no-repeat 79% 83%;
-  // background-size: 30%;
   background-image: url(@/assets/info-bg.svg), 
       url(@/assets/info-circle.svg);
   background-position: 85% 137px, 10% 150px;
   background-size: 689px, 59px;
 
   background-repeat: no-repeat, no-repeat;
-  // &::after {
-  //   content: '';
-  //   background: ;
-  // }
 
   .h2 {
     margin-bottom: 82px;

@@ -16,6 +16,7 @@ body {
     border: 2px solid #75E169;
     color: #FFFFFF;
     text-transform: uppercase;
+    cursor: pointer;
 
     &:hover {
         background: #75E169;
@@ -37,7 +38,6 @@ body {
     position: relative;
     left: 0;
     bottom: 13px;
-    max-width: 470px;
 }
 
 .validation__input {

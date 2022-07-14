@@ -41,6 +41,7 @@
     <Services />
     <Info/>
     <ContactForm/>
+    <Footer/>
   </div>
 </template>
 
@@ -48,13 +49,15 @@
 import Services from "./components/Services.vue";
 import Info from "./components/Info.vue";
 import ContactForm from "./components/ContactForm.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Services,
     Info,
-    ContactForm
+    ContactForm,
+    Footer
   },
 };
 </script>
