@@ -125,15 +125,17 @@ export default {
       }
       &__body {
         padding-left: 57px;
+        
         &::before {
           left: 30px;
+          min-height: 84%;
         }
         p + p {
           margin-top: 0px;
         }
       }
       &__content {
-        padding: 0;
+        padding: 0 0 46px;
       }
       &::after {
         width: 15px;
