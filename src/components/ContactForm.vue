@@ -145,4 +145,34 @@ export default {
   position: relative;
   display: block;
 }
+
+@media (max-width: 1710px) {
+  .contacts {
+    background-size: 20%, 10%;
+  }
+}
+
+@media (max-width: 975px) {
+  .contacts {
+    background-position: 5% 90%, 90% 20%;
+  }
+}
+
+@media (max-width: 640px) {
+  .contacts {
+    background-color: #daecff;
+    background-image: url(@/assets/mobile/phone.svg);
+    background-size: 286px;
+    background-position: 50% 95%;
+    background-repeat: no-repeat;
+    padding: 42px 0 358px;
+    .h2 {
+      margin-bottom: 12px;
+    }
+    &__text {
+      max-width: max-content;
+      margin: 0 auto 25px;
+    }
+  }
+}
 </style>

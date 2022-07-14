@@ -10,7 +10,7 @@
               alt="logo"
             />
           </div>
-          <ul class="messenger-list _f">
+          <ul class="messenger-list messenger-list-desktop _f">
             <li class="messenger-item">
               <a class="messenger-link" href="#">
                 <img
@@ -63,6 +63,49 @@
           <a class="footer-callback__link" href=""> Анна: +380505859409 </a>
           <a class="footer-callback__link" href=""> Валерия: +380505859409 </a>
         </div>
+        <ul class="messenger-list messenger-list-mobile _f">
+          <li class="messenger-item">
+            <a class="messenger-link" href="#">
+              <img
+                class="messenger-pic"
+                src="@/assets/instagram.svg"
+                alt="instagram"
+              />
+            </a>
+          </li>
+          <li class="messenger-item">
+            <a class="messenger-link" href="#">
+              <img
+                class="messenger-pic"
+                src="@/assets/facebook.svg"
+                alt="facebook"
+              />
+            </a>
+          </li>
+          <li class="messenger-item">
+            <a class="messenger-link" href="#">
+              <img
+                class="messenger-pic"
+                src="@/assets/telegram.svg"
+                alt="telegram"
+              />
+            </a>
+          </li>
+          <li class="messenger-item">
+            <a class="messenger-link" href="#">
+              <img class="messenger-pic" src="@/assets/viber.svg" alt="viber" />
+            </a>
+          </li>
+          <li class="messenger-item">
+            <a class="messenger-link" href="#">
+              <img
+                class="messenger-pic"
+                src="@/assets/whatsapp.svg"
+                alt="whatsapp"
+              />
+            </a>
+          </li>
+        </ul>
         <div class="column">
           <a href="#">hr@dv-s.com</a>
         </div>
@@ -100,9 +143,7 @@ export default {
       position: relative;
       font-size: 20px;
       line-height: 24px;
-      & + & {
-        margin-top: 15px;
-      }
+      margin-bottom: 15px;
       &::before {
         content: "";
         position: absolute;
@@ -114,6 +155,15 @@ export default {
       }
     }
   }
+
+  .messenger-list {
+    &-desktop {
+      display: flex;
+    }
+    &-mobile {
+      display: none;
+    }
+  }
   .messenger-item + .messenger-item {
     margin-left: 38px;
   }
@@ -122,6 +172,54 @@ export default {
     text-align: center;
     font-size: 18px;
     line-height: 175%;
+  }
+
+  @media (max-width: 975px) {
+    .footer {
+      &__logo {
+        margin-bottom: 20px;
+      }
+      &-callback {
+        margin: 0 46px 0 37px;
+      }
+    }
+  }
+
+  @media (max-width: 844px) {
+    .footer {
+      &-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__logo {
+        margin-bottom: 27px;
+      }
+      &-callback {
+        margin-bottom: 62px;
+      }
+    }
+    .messenger-list {
+      margin-bottom: 40px;
+      &-desktop {
+        display: none;
+      }
+      &-mobile {
+        display: flex;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .footer {
+      font-size: 16px;
+      line-height: 140%;
+      &-callback {
+        font-size: 16px;
+      }
+    }
+    .copyright {
+      font-size: 14px;
+    }
   }
 }
 </style>

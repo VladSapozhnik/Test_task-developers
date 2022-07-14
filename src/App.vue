@@ -139,4 +139,23 @@ export default {
     background-position: 1% 100px, 0% 95%, 90% 85%;
   }
 }
+@media (max-width: 640px) {
+  .main {
+    padding: 500px 0 51px;
+    background-image: url(@/assets/mobile/circle-main.svg), url(@/assets/mobile/main-bg.svg);
+    background-position: 90% 78%, 50% 84px;
+    background-size: 15px, 100%;
+    background-repeat: no-repeat, no-repeat;
+    .h1 {
+      font-size: 27px;
+      line-height: 120%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 386px 0 51px;
+  }
+}
 </style>

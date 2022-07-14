@@ -32,11 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-.services {
-  padding: 120px 0;
-  background: #daecff;
-}
-
 .accordion {
   &-item {
     background: #fff;
@@ -113,6 +108,43 @@ export default {
 
       .accordion-item__head {
         padding-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .accordion {
+    &-item {
+      padding: 14px 65px 17px 0px;
+      font-size: 17px;
+      line-height: 175%;
+      margin-bottom: 10px;
+      &__head {
+        padding-left: 57px;
+      }
+      &__body {
+        padding-left: 57px;
+        &::before {
+          left: 30px;
+        }
+        p + p {
+          margin-top: 0px;
+        }
+      }
+      &__content {
+        padding: 0;
+      }
+      &::after {
+        width: 15px;
+        height: 15px;
+        left: 24px;
+      }
+    }
+
+    &.active {
+      .accordion-item__head {
+        padding-bottom: 19px;
       }
     }
   }

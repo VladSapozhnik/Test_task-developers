@@ -2,6 +2,11 @@
   <div class="info">
     <div class="container">
       <h2 class="h2">Необходимо больше информации?</h2>
+      <img
+        class="info-pic__mobile"
+        src="@/assets/mobile/info-pic.svg"
+        alt="info"
+      />
       <p class="info__text">
         Если Вы владелец онлайн-магазина или только начинаете свой путь в
         электронной коммерции и вам нужен уникальный дизайн онлайн магазина для
@@ -22,15 +27,15 @@ export default {
 <style lang="scss">
 .info {
   padding: 216px 0 180px;
-  background-image: url(@/assets/info-bg.svg), 
-      url(@/assets/info-circle.svg);
+  background-image: url(@/assets/info-bg.svg), url(@/assets/info-circle.svg);
   background-position: 85% 137px, 10% 150px;
   background-size: 689px, 59px;
 
   background-repeat: no-repeat, no-repeat;
-
+  &-pic__mobile {
+    display: none;
+  }
   .h2 {
-    margin-bottom: 82px;
     text-align: left;
     margin-bottom: 53px;
   }
@@ -44,17 +49,39 @@ export default {
   }
 }
 
-// @media (max-width: 1710px) {
-//   .services {
-//     background-position: 93% 97%;
-//     background-size: 6%;
-//   }
-// }
+@media (max-width: 1710px) {
+  .info {
+    background-position: 85% 50%, 5% 150px;
+    background-size: 40%, 3%;
+  }
+}
 
-// @media (max-width: 975px) {
-//   .services {
-//     background-position: 93% 97%;
-//     background-size: 70px;
-//   }
-// }
+@media (max-width: 1200px) {
+  .info {
+    background-position: 85% 80%, 1% 150px;
+    background-size: 40%, 3%;
+  }
+}
+
+@media (max-width: 640px) {
+  .info {
+    padding: 43px 0 50px;
+    background-image: url(@/assets/mobile/circle-info.svg);
+    background-position: 95% -12px;
+    background-size: 39px;
+
+    &-pic__mobile {
+      display: block;
+      margin: 0 auto 29px;
+    }
+
+    .h2 {
+      margin-bottom: 27px;
+    }
+
+    &__text {
+      margin-bottom: 29px;
+    }
+  }
+}
 </style>
