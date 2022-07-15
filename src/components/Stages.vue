@@ -80,7 +80,7 @@ export default {
           prevEl: ".banner__button--prev",
         },
         breakpoints: {
-          640: {
+          200: {
             slidesPerView: 1,
           },
         },
@@ -96,7 +96,7 @@ export default {
   background-image: url(@/assets/stages-circle.svg),
     url(@/assets/stages-wavea.svg);
   background-position: 10% 129px, 85% 96%;
-  background-size: 68px, 190px;
+  background-size: 70px, 190px;
   background-repeat: no-repeat, no-repeat;
   .h2 {
     margin-bottom: 84px;
@@ -146,10 +146,9 @@ export default {
   padding: 53px 73px 59px 33px;
   border: 2px solid #67aefc;
   border-radius: 15px;
-  min-height: 391px;
+  height: 391px;
   justify-content: space-between;
   .h3 {
-    text-align: left;
     margin-bottom: 21px;
     font-weight: 700;
     font-size: 21px;
@@ -158,7 +157,10 @@ export default {
   }
 
   &__description {
-    max-width: 274px;
+    max-width: 300px;
+    margin-bottom: 64px;
+    font-size: 18px;
+    line-height: 140%;
   }
 
   &__img {
@@ -174,6 +176,51 @@ export default {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1710px) {
+  .stages {
+    background-position: 2% 59px, 85% 96%;
+  }
+}
+
+@media (max-width: 640px) {
+  .stages {
+    background-image: url(@/assets/stages-circle.svg);
+    background-position: -4% 18px;
+    background-size: 39px;
+    background-repeat: no-repeat;
+    padding: 42px 0 45px;
+    .h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .banner__button {
+    & + & {
+      margin-left: 107px;
+    }
+  }
+
+  .slider-wrap {
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  .slider-item {
+    padding: 27px 29px 53px 33px;
+    height: auto;
+    min-height: 615px;
+    flex-direction: column;
+    align-items: center;
+    &__description {
+      max-width: 100%;
+      font-size: 17px;
+      line-height: 175% !important;
+    }
+    .h3 {
+      font-size: 17px;
+      line-height: 27px;
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+  }
 }
 </style>
