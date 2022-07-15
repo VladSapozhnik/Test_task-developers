@@ -81,11 +81,11 @@ export default {
 
 @media (max-width: 640px) {
   .services {
-    padding: 142px 0 30px;
+    padding: 16px 0 30px;
     background: #daecff;
 
     .h2 {
-      margin-bottom: 82px;
+      margin-bottom: 17px;
     }
   }
 }

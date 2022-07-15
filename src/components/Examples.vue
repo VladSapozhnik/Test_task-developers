@@ -33,30 +33,30 @@
             <div class="examples-swiper-item">
               <img
                 class="examples-swiper-item__img"
-                src="@/assets/examples-slider/1.jpg"
+                src="@/assets/examples-slider/4.jpg"
                 alt=""
               />
             </div>
             <div class="examples-swiper-item">
               <img
                 class="examples-swiper-item__img"
-                src="@/assets/examples-slider/2.jpg"
+                src="@/assets/examples-slider/5.jpg"
                 alt=""
               />
             </div>
             <div class="examples-swiper-item">
               <img
                 class="examples-swiper-item__img"
-                src="@/assets/examples-slider/3.jpg"
+                src="@/assets/examples-slider/6.jpg"
                 alt=""
               />
             </div>
           </div>
         </swiper-slide>
       </swiper>
-      <div class="banner-wrap">
-        <div class="banner__button banner__button--prev swiper-slide"></div>
-        <div class="banner__button banner__button--next swiper-slide"></div>
+      <div class="examples-wrapper">
+        <div class="examples__button examples__button--prev swiper-slide"></div>
+        <div class="examples__button examples__button--next swiper-slide"></div>
       </div>
       <div class="examples-wrap">
         <div class="column">
@@ -125,8 +125,8 @@ export default {
       swiperOption: {
         spaceBetween: 20,
         navigation: {
-          nextEl: ".banner__button--next",
-          prevEl: ".banner__button--prev",
+          nextEl: ".examples__button--next",
+          prevEl: ".examples__button--prev",
         },
         breakpoints: {
           200: {
@@ -189,11 +189,11 @@ export default {
   }
 }
 
-.banner-wrap {
+.examples-wrapper {
   display: none;
   justify-content: center;
 }
-.banner__button {
+.examples__button {
   width: 60px;
   height: 60px;
   border: 2px solid #67aefc;
@@ -241,7 +241,7 @@ export default {
       display: none;
     }
   }
-  .banner-wrap {
+  .examples-wrapper {
     display: flex;
   }
 

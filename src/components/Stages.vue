@@ -68,17 +68,10 @@ export default {
         },
       ],
       swiperOption: {
-        freeMode: true,
-        slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
           nextEl: ".banner__button--next",
           prevEl: ".banner__button--prev",
-        },
-        breakpoints: {
-          200: {
-            slidesPerView: 1,
-          },
         },
       },
     };

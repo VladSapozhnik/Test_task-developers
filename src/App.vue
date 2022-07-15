@@ -1,20 +1,20 @@
  <template>
   <div id="app">
+    <ul class="nav-mobile" :class="{ active: isOpen }">
+      <li>
+        <a href="#services" class="nav-mobile__link">Услуги</a>
+      </li>
+      <li>
+        <a href="#" class="nav-mobile__link">Портфолио</a>
+      </li>
+      <li>
+        <a  href="#stages" class="nav-mobile__link">Этапы</a>
+      </li>
+      <li>
+        <a href="#" class="nav-mobile__link">Дизайнеры</a>
+      </li>
+    </ul>
     <header class="header">
-      <ul class="nav-mobile" :class="{ active: isOpen }">
-        <li>
-          <a href="#" class="nav-mobile__link">Услуги</a>
-        </li>
-        <li>
-          <a href="#" class="nav-mobile__link">Портфолио</a>
-        </li>
-        <li>
-          <a href="#" class="nav-mobile__link">Этапы</a>
-        </li>
-        <li>
-          <a href="#" class="nav-mobile__link">Дизайнеры</a>
-        </li>
-      </ul>
       <div class="container">
         <div class="header-wrap _f _i-center">
           <div class="header__logo">
@@ -29,20 +29,20 @@
           <nav class="nav _ml-auto">
             <ul class="nav-list">
               <li>
-                <a href="#" class="nav__link">Услуги</a>
+                <a href="#services" class="nav__link">Услуги</a>
               </li>
               <li>
                 <a href="#" class="nav__link">Портфолио</a>
               </li>
               <li>
-                <a href="#" class="nav__link">Этапы</a>
+                <a href="#stages" class="nav__link">Этапы</a>
               </li>
               <li>
                 <a href="#" class="nav__link">Дизайнеры</a>
               </li>
             </ul>
           </nav>
-          <div class="btn _ml-30">Заказать</div>
+          <a href="#contacts" class="btn _ml-30">Заказать</a>
         </div>
       </div>
     </header>
@@ -57,11 +57,11 @@
         <div class="btn main-btn">Заказать</div>
       </div>
     </main>
-    <Services />
-    <Stages />
+    <Services id="services"/>
+    <Stages id="stages" />
     <Examples />
     <Info />
-    <ContactForm />
+    <ContactForm id="contacts" />
     <Footer />
   </div>
 </template>
@@ -126,11 +126,10 @@ export default {
 .nav-mobile {
   width: 100%;
   background: #67aefc;
-  position: absolute;
+  position: fixed;
   padding: 137px 0 49px;
   text-align: center;
   transition: all 0.3s ease;
-  z-index: -1;
   transform: translateY(-100%);
   &.active {
     left: 0;
@@ -229,7 +228,7 @@ export default {
 }
 @media (max-width: 640px) {
   .main {
-    padding: 500px 0 51px;
+    padding: 530px 0 51px;
     background-image: url(@/assets/mobile/circle-main.svg),
       url(@/assets/mobile/main-bg.svg);
     background-position: 90% 78%, 50% 84px;
@@ -240,9 +239,19 @@ export default {
       line-height: 120%;
     }
   }
+  .header__logo {
+    width: 136px;
+    padding: 5px 0;
+  }
 }
 
 @media (max-width: 500px) {
+  .main {
+    padding: 440px 0 51px;
+  }
+}
+
+@media (max-width: 425px) {
   .main {
     padding: 386px 0 51px;
   }
