@@ -71,10 +71,6 @@ export default {
         freeMode: true,
         slidesPerView: 4,
         spaceBetween: 20,
-        pagination: {
-          el: "#banner-pagination",
-          clickable: true,
-        },
         navigation: {
           nextEl: ".banner__button--next",
           prevEl: ".banner__button--prev",
@@ -90,7 +86,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .stages {
   padding: 123px 0 128px;
   background-image: url(@/assets/stages-circle.svg),
