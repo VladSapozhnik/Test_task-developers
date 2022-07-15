@@ -143,6 +143,12 @@ export default {
 .examples {
   padding: 121px 0;
   background: #daecff;
+  background-image: url(@/assets/examples-wavea.svg),
+    url(@/assets/examples-circle.svg), url(@/assets/examples-arrow.svg);
+  background-position: 3% 301px, 93% 86%, -50% 99%;
+  background-size: 215px, 108px, 814px;
+  background-repeat: no-repeat, no-repeat;
+
   .h2 {
     margin-bottom: 51px;
   }
@@ -210,14 +216,29 @@ export default {
   }
 }
 
+@media (max-width: 1710px) {
+  .examples {
+    background-position: 2% 301px, 99% 86%, -50% 99%;
+    background-size: 8%, 5%, 40%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .examples {
+    background-position: 2% 15px, 99% 98%, -55% 103%;
+    background-size: 8%, 5%, 40%;
+  }
+}
+
 @media (max-width: 640px) {
   .examples {
     padding: 23px 0 30px;
+    background-image: none;
     .h2 {
-        margin-bottom: 15px;
+      margin-bottom: 15px;
     }
     &-wrap {
-        display: none;
+      display: none;
     }
   }
   .banner-wrap {

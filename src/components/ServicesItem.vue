@@ -88,7 +88,7 @@ export default {
       position: absolute;
       width: 30px;
       height: 30px;
-      background: url("@/assets/array.svg") no-repeat center center;
+      background: url("@/assets/arrow.svg") no-repeat center center;
       right: 39px;
       top: 15px;
       transform: rotate(180deg);
