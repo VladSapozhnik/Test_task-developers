@@ -80,7 +80,7 @@ export default {
           prevEl: ".banner__button--prev",
         },
         breakpoints: {
-          1024: {
+          640: {
             slidesPerView: 1,
           },
         },
@@ -165,5 +165,15 @@ export default {
     max-width: 227px;
     display: block;
   }
+}
+
+@media (max-width: 1710px) {
+  .stages {
+    background-size: 4%, 10%;
+    background-position: 5% 129px, 85% 96%;
+  }
+}
+
+@media (max-width: 1024px) {
 }
 </style>
