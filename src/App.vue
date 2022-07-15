@@ -58,7 +58,8 @@
       </div>
     </main>
     <Services />
-    <Stages/>
+    <Stages />
+    <Examples />
     <Info />
     <ContactForm />
     <Footer />
@@ -69,8 +70,9 @@
 import Services from "./components/Services.vue";
 import Info from "./components/Info.vue";
 import ContactForm from "./components/ContactForm.vue";
+import Stages from "./components/Stages.vue";
+import Examples from "./components/Examples.vue";
 import Footer from "./components/Footer.vue";
-import Stages from './components/Stages.vue';
 
 export default {
   name: "App",
@@ -78,8 +80,9 @@ export default {
     Services,
     Info,
     ContactForm,
-    Footer,
     Stages,
+    Examples,
+    Footer,
   },
   data() {
     return {
@@ -111,7 +114,7 @@ export default {
   &__circle {
     width: 13px;
     height: 13px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 50%;
     display: block;
     & + & {

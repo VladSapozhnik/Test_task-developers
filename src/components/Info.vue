@@ -42,6 +42,8 @@ export default {
   &__text {
     max-width: 600px;
     margin-bottom: 45px;
+    font-size: 18px;
+    line-height: 140%;
   }
 
   .btn {
