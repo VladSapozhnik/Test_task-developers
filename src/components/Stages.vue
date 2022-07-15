@@ -1,11 +1,12 @@
 <template>
-  <section>
+  <section class="stages">
     <div class="container">
-      <swiper class="swiper" :options="swiperOption" >
+      <h2 class="h2">Этапы разработки интернет-магазина</h2>
+      <swiper class="swiper slider-wrap" :options="swiperOption">
         <swiper-slide v-for="(item, index) of slideData" :key="index">
           <div class="slider-item">
             <div>
-              <h2 class="h2">{{ item.title }}</h2>
+              <h3 class="h3">{{ item.title }}</h3>
               <p class="slider-item__description">
                 {{ item.description }}
               </p>
@@ -14,9 +15,10 @@
           </div>
         </swiper-slide>
       </swiper>
-
-      <div class="banner__button--prev swiper-slide">dsadas</div>
-      <div class="banner__button--next swiper-slide">dsad</div>
+      <div class="banner-wrap">
+        <div class="banner__button banner__button--prev swiper-slide"></div>
+        <div class="banner__button banner__button--next swiper-slide"></div>
+      </div>
     </div>
   </section>
 </template>
@@ -89,16 +91,70 @@ export default {
 </script>
 
 <style lang="scss">
+.stages {
+  padding: 123px 0 128px;
+  background-image: url(@/assets/stages-circle.svg),
+    url(@/assets/stages-wavea.svg);
+  background-position: 10% 129px, 85% 96%;
+  background-size: 68px, 190px;
+  background-repeat: no-repeat, no-repeat;
+  .h2 {
+    margin-bottom: 84px;
+  }
+}
+
+.banner-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.banner__button {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #67aefc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  & + & {
+    margin-left: 30px;
+  }
+
+  &--prev {
+    background-image: url(@/assets/slider-img/arrow-prev.svg);
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+  }
+
+  &--next {
+    background-image: url(@/assets/slider-img/arrow-next.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.slider-wrap {
+  max-width: 672px;
+  overflow: visible;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 84px;
+}
 .slider-item {
   display: flex;
   max-width: 672px;
-  padding: 85px 70px 63px 33px;
+  padding: 53px 73px 59px 33px;
   border: 2px solid #67aefc;
   border-radius: 15px;
+  min-height: 391px;
   justify-content: space-between;
-  .h2 {
+  .h3 {
     text-align: left;
     margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 125%;
+    max-width: 270px;
   }
 
   &__description {
@@ -106,6 +162,7 @@ export default {
   }
 
   &__img {
+    max-width: 227px;
     display: block;
   }
 }
