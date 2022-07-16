@@ -124,7 +124,7 @@ export default {
 <style lang="scss">
 .footer {
   background: #64abf9;
-  padding: 107px 0 79px;
+  padding: 101px 0 79px;
   color: #ffffff;
   &-wrap {
     display: flex;
@@ -191,6 +191,7 @@ export default {
     &-wrap {
       flex-direction: column;
       align-items: center;
+      margin-bottom: 50px;
     }
 
     &__logo {
@@ -217,11 +218,28 @@ export default {
     line-height: 140%;
     &-callback {
       font-size: 16px;
+      &__link {
+        padding-left: 45px;
+        margin-bottom: 7px;
+        &::before {
+          width: 28px;
+          height: 29px;
+        }
+      }
     }
+
     &-wrap {
       margin-bottom: 23px;
     }
+    .messenger-list {
+      justify-content: center;
+    }
+
+    .messenger-item + .messenger-item {
+      margin-left: 25px;
+    }
   }
+
   .copyright {
     font-size: 14px;
   }

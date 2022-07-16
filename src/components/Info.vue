@@ -68,10 +68,19 @@ export default {
 @media (max-width: 640px) {
   .info {
     padding: 43px 0 50px;
-    background-image: url(@/assets/mobile/circle-info.svg);
-    background-position: 95% -12px;
-    background-size: 39px;
-
+    background-image: none;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 39px;
+      height: 39px;
+      background-image: url(@/assets/mobile/circle-info.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -12px;
+      right: 33px;
+    }
     &-pic__mobile {
       display: block;
       margin: 0 auto 29px;

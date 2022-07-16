@@ -8,7 +8,7 @@
         <a href="#" class="nav-mobile__link">Портфолио</a>
       </li>
       <li>
-        <a  href="#stages" class="nav-mobile__link">Этапы</a>
+        <a href="#stages" class="nav-mobile__link">Этапы</a>
       </li>
       <li>
         <a href="#" class="nav-mobile__link">Дизайнеры</a>
@@ -57,7 +57,7 @@
         <div class="btn main-btn">Заказать</div>
       </div>
     </main>
-    <Services id="services"/>
+    <Services id="services" />
     <Stages id="stages" />
     <Examples />
     <Info />
@@ -237,8 +237,18 @@ export default {
     .h1 {
       font-size: 27px;
       line-height: 120%;
+      margin-bottom: 22px;
+    }
+    &__subtitle {
+      margin-bottom: 34px;
+    }
+    &-btn {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 175%;
     }
   }
+
   .header__logo {
     width: 136px;
     padding: 5px 0;
